@@ -1,0 +1,110 @@
+@import '../styles/vars.scss';
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: $main-color;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 300ms ease-in-out;
+    &.sticky {
+        background-color: $white;
+        color: $black;
+        
+        .navigation {
+            a {
+                color: $black;
+                &::after {
+                    background-color: $black;
+                }
+            }
+        }
+    }
+    
+    .logo {
+        width: 150px;
+        img {
+            width: 100%;
+        }
+    }
+
+    .navigation {
+        width: 70%;
+        &-list {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &__item {
+                list-style: none;
+                margin-left: 20px;
+                position: relative;
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    font-size: 32px;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 0;
+                        height: 3px;
+                        background-color: $white;
+                        bottom: -15px;
+                        left: 0;
+                        transition: width 0.3s ease-in-out;
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }   
+                }
+                &.active {
+                    a {
+                        color: red;
+                    }
+                    
+                }
+            }
+        }
+    }
+
+   .hamburger {
+        display: block;
+        width: 60px;
+        height: 45px;
+        position: absolute;
+        right: 60px;
+        &.active {
+            .left {
+                top: 36px;
+                transform: rotate(135deg);
+            }
+            .center {
+                opacity: 0;
+            }
+            .right {
+                top: 36px;
+                transform: rotate(-135deg);
+            }
+        }
+        &__line {
+            width: 100%;
+            position: absolute;
+            height: 9px;
+            background-color: $white;
+            margin-bottom: 7px;
+            transition: 300ms ease-in-out;
+            &.center {
+                top: 18px;
+            }
+            &.right {
+                top: 36px;
+                
+            }
+        }
+    }
+   
+}
