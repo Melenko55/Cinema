@@ -1,0 +1,89 @@
+{
+    "schedule": [
+        {
+            "start": "2019-01-01T00:00:00",
+            "end": "2019-01-01T00:00:00",
+            "films": [
+                {
+                    "id": "1",
+                    "time": ["10:20", "12:15", "14:30", "16:20", "18:10", "20:00"]
+                },
+                {
+                    "id": "2",
+                    "time": ["10:20", "12:15", "14:30", "16:20", "18:10", "20:00"]
+                },
+                {
+                    "id": "3",
+                    "time": ["10:20", "12:15", "14:30", "16:20", "18:10", "20:00"]
+                },
+                {
+                    "id": "4",
+                    "time": ["10:20", "12:15", "14:30", "16:20", "18:10", "20:00"]
+                },
+                {
+                    "id": "5",
+                    "time": ["10:20", "12:15", "14:30", "16:20", "18:10", "20:00"]
+                },
+                {
+                    "id": "6",
+                    "time": ["10:20", "12:15", "14:30", "16:20", "18:10", "20:00"]
+                },
+                {
+                    "id": "7",
+                    "time": ["10:20", "12:15", "14:30", "16:20", "18:10", "20:00"]
+                },
+                {
+                    "id": "8",
+                    "time": ["10:20", "12:15", "14:30", "16:20", "18:10", "20:00"]
+                },
+                {
+                    "id": "9",
+                    "time": ["10:20", "12:15", "14:30", "16:20", "18:10", "20:00"]
+                },
+                {
+                    "id": "10",
+                    "time": ["10:20", "12:15", "14:30", "16:20", "18:10", "20:00"]
+                },
+                {
+                    "id": "11",
+                    "time": ["10:20", "12:15", "14:30", "16:20", "18:10", "20:00"]
+                }
+            ]
+        }
+    ],
+    "films": [
+        {
+            "id": "1",
+            "name": "Побег из Шоушенка",
+            "description": "Фильм про побег из шоушенка",
+            "image": "https://www.kinopoisk.ru/images/film_big/1.jpg",
+            "genre": "Драма",
+            "year": "1994",
+            "duration": "2 часа",
+            "country": "США",
+            "rating": "8.5",
+            "director": "Фрэнк Дарабонт",
+            "actors": "Джеймс Кэмерон, Кристофер Робин, Кеннеди Бернард",
+            "trailer": "https://www.youtube.com/embed/2WfXo7MhZtU",
+            "scenario": "Кристофер Робин",      
+            "premiere": "2019-01-01T00:00:00",
+            "ageLimit": "16+",
+            "images": ["https://www.kinopoisk.ru/images/film_big/1.jpg", "https://www.kinopoisk.ru/images/film_big/2.jpg", "https://www.kinopoisk.ru/images/film_big/3.jpg"] 
+
+        }
+        
+    ],
+    "comments": [
+        {"id": 1, "author": "James", "comment_text": "dassafafsfsfsafsfafsafasfsafasfsafasfsafasf", "rate": 4},
+        {"id": 2, "author": "James", "comment_text": "dassafafsfsfsafsfafsafasfsafasfsafasfsafasf", "rate": 4},
+        {"id": 3, "author": "James", "comment_text": "dassafafsfsfsafsfafsafasfsafasfsafasfsafasf", "rate": 4},
+        {"id": 4, "author": "James", "comment_text": "dassafafsfsfsafsfafsafasfsafasfsafasfsafasf", "rate": 4},
+        {"id": 5, "author": "James", "comment_text": "dassafafsfsfsafsfafsafasfsafasfsafasfsafasf", "rate": 4},
+        {"id": 6, "author": "James", "comment_text": "dassafafsfsfsafsfafsafasfsafasfsafasfsafasf", "rate": 4},
+        {"id": 7, "author": "James", "comment_text": "dassafafsfsfsafsfafsafasfsafasfsafasfsafasf", "rate": 4},
+        {"id": 8, "author": "James", "comment_text": "dassafafsfsfsafsfafsafasfsafasfsafasfsafasf", "rate": 4},
+        {"id": 9, "author": "James", "comment_text": "dassafafsfsfsafsfafsafasfsafasfsafasfsafasf", "rate": 4},
+        {"id": 10, "author": "James", "comment_text": "dassafafsfsfsafsfafsafasfsafasfsafasfsafasf", "rate": 4},
+        {"id": 11, "author": "James", "comment_text": "dassafafsfsfsafsfafsafasfsafasfsafasfsafasf", "rate": 4}
+    ]
+}
