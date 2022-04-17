@@ -9,10 +9,18 @@ function NavigationList({ isMenuOpen, isMobile }) {
 				(isMobile ? (isMenuOpen ? "show" : "") : "show")
 			}
 		>
-			<NavigationListItem page="Films" isActive={true} path={"/"} />
+			<NavigationListItem page="Films" isActive={true} path={"films"} />
 			<NavigationListItem page="Schedule" isActive={false} path={"/"} />
-			<NavigationListItem page="About us" isActive={false} path={"/"} />
-			<NavigationListItem page="Comments" isActive={false} path={"/"} />
+			<NavigationListItem
+				page="About us"
+				isActive={false}
+				path={"about"}
+			/>
+			<NavigationListItem
+				page="Comments"
+				isActive={false}
+				path={"comments"}
+			/>
 		</ul>
 	);
 }
