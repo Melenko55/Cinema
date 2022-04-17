@@ -1,24 +1,31 @@
 import NavigationListItem from "./NavigationListItem";
 import PropTypes from "prop-types";
 
-function NavigationList({ isMenuOpen, isMobile }) {
+function NavigationList({ isActive, setIsActive }) {
 	return (
-		<ul
-			className={
-				"navigation-list " +
-				(isMobile ? (isMenuOpen ? "show" : "") : "show")
-			}
-		>
-			<NavigationListItem page="Films" isActive={true} path={"films"} />
-			<NavigationListItem page="Schedule" isActive={false} path={"/"} />
+		<ul className={"navigation " + (isActive && "active")}>
 			<NavigationListItem
+				setIsActive={setIsActive}
+				page="Films"
+				current={true}
+				path={"films"}
+			/>
+			<NavigationListItem
+				setIsActive={setIsActive}
+				page="Schedule"
+				current={false}
+				path={"/"}
+			/>
+			<NavigationListItem
+				setIsActive={setIsActive}
 				page="About us"
-				isActive={false}
+				current={false}
 				path={"about"}
 			/>
 			<NavigationListItem
+				setIsActive={setIsActive}
 				page="Comments"
-				isActive={false}
+				current={false}
 				path={"comments"}
 			/>
 		</ul>
@@ -26,7 +33,7 @@ function NavigationList({ isMenuOpen, isMobile }) {
 }
 
 NavigationList.propTypes = {
-	isMobile: PropTypes.bool.isRequired,
-	isMenuOpen: PropTypes.bool.isRequired,
+	isActive: PropTypes.bool.isRequired,
+	setIsActive: PropTypes.func.isRequired,
 };
 export default NavigationList;

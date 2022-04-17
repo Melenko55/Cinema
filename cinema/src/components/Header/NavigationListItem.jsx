@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function NavigationListItem({ page, path, isActive }) {
+function NavigationListItem({ page, path, current, setIsActive }) {
 	return (
-		<li className={"navigation-list__item " + (isActive ? "active" : "")}>
+		<li
+			onClick={() => setIsActive(false)}
+			className={"navigation__item " + (current ? "current" : "")}
+		>
 			<Link to={path}>{page}</Link>
 		</li>
 	);
@@ -11,8 +14,9 @@ function NavigationListItem({ page, path, isActive }) {
 
 NavigationListItem.propTypes = {
 	page: PropTypes.string.isRequired,
-	isActive: PropTypes.bool.isRequired,
+	current: PropTypes.bool.isRequired,
 	path: PropTypes.string.isRequired,
+	setIsActive: PropTypes.func.isRequired,
 };
 
 export default NavigationListItem;

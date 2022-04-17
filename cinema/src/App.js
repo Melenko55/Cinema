@@ -13,7 +13,6 @@ import Hall from './pages/Hall';
 import Comments from './pages/Comments';
 import About from './pages/About';
 
-import './styles/App.scss';
 function App() {
   useEffect(() => {
     window.onscroll = () => {
@@ -27,7 +26,7 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route index path="/" element={<Schedule />} />
+          <Route index path="" element={<Schedule />} />
           <Route index path="/films" element={<Films />} />
           <Route index path="/films/:filmId" element={<Film />} />
           <Route index path="/hall/:filmId" element={<Hall />} />

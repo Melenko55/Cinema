@@ -1,24 +1,32 @@
 import { useState } from "react";
-import Hamburger from "./Hamburger";
-
 import "./Header.scss";
-import Logo from "./Logo";
 import NavigationList from "./NavigationList";
+import { Link } from "react-router-dom";
+import logo from "../../assets/Logo.png";
+import cross from "../../assets/Cross.png";
+import hamburger from "../../assets/Hamburger.png";
 
 function Header() {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [isActive, setIsActive] = useState(false);
+
 	return (
-		<header className="header">
-			<Logo />
+		<header>
+			<Link className="logo_icon" to={"/"}>
+				<img src={logo} alt="logo" />
+			</Link>
 
-			<nav className="navigation">
-				<NavigationList
-					isMenuOpen={isMenuOpen}
-					isMobile={window.innerWidth < 768}
-				/>
-			</nav>
+			<div className="logo_naming">
+				<span>Pleasure</span> films
+			</div>
 
-			<Hamburger isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+			<NavigationList setIsActive={setIsActive} isActive={isActive} />
+
+			<button
+				onClick={() => setIsActive((prev) => !prev)}
+				className={"btn-toggle " + (isActive && "active")}
+			>
+				{isActive ? <img src={cross} /> : <img src={hamburger} />}
+			</button>
 		</header>
 	);
 }
