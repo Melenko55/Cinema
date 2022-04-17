@@ -9,5 +9,5 @@ export default configureStore({
         schedule: scheduleReducer,
         comment: commentReducer
     },
-    // middleware: []
+    //middleware: []
 })
