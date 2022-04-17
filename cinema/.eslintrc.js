@@ -20,7 +20,7 @@ module.exports = {
         "no-useless-constructor": "error",
         "no-useless-rename": "error",
         "no-var": "error",
-        "max-len": ["error", { "code": 100 }],
+        // "max-len": ["error", { "code": 100 }],
         "react/jsx-uses-react": "off",
         "react/react-in-jsx-scope": "off"
     }

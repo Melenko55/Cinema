@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import Footer from './components/Footer';
 import Header from './components/Header/Header';
-import './styles/App.scss';
 import Films from './pages/Films';
 import Schedule from './pages/Schedule';
 import Film from './pages/Film';
@@ -14,6 +13,7 @@ import Hall from './pages/Hall';
 import Comments from './pages/Comments';
 import About from './pages/About';
 
+import './styles/App.scss';
 function App() {
   useEffect(() => {
     window.onscroll = () => {
