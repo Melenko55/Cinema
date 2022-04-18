@@ -1,0 +1,94 @@
+@import '../../../styles/config/adaptive.scss';
+@import '../../../styles/config/fonts.scss';
+@import '../../../styles/config/vars.scss';
+
+
+@include respond-to(xsmallDevices) {
+    header {
+        z-index: 9999;
+        position: fixed;
+        top: 0;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        .logo_naming {
+            margin-left: -5px;
+            @include montserrat(regular);
+            font-size: 22px;
+            span {
+                @include poppins(bold);
+            }
+        }
+
+        
+        .btn-toggle {
+            outline: none;
+            border: none;
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navigation {
+            margin-top: 0;
+             &.active {
+                display: flex;
+            }
+            height: calc(100% - 65px);
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            padding: 0;
+            top: 68px;
+            list-style: none;
+            transition: 0.3s ease-in-out;
+           background: #fff;
+           text-align: center;
+           left: 0;
+            &__item {
+                width: 100%;
+                margin-bottom: 50px;
+                &.current {
+                    a {
+                        @include weight(bold);
+                        color: $pink_dark;
+                    }
+                }
+                a {
+                    position: relative;
+                    @include poppins(thin);
+                   
+                    font-size: 28px;
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 0%;
+                        height: 2px;
+                        background: #000;
+                        margin-top: 10px;
+                        transition: 0.3s ease-in-out;
+                    }
+                    &:hover {
+                        @include weight(bold);
+                    }
+                    &:hover:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+

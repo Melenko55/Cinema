@@ -1,0 +1,14 @@
+.arrow-back {
+    position: sticky;
+    bottom: 70px;
+    left: calc(100%);
+    width: fit-content;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 5px;
+    box-sizing:border-box;
+    transition: 0.3s ease-in-out;
+    img {
+        width: 100%;
+    }
+}

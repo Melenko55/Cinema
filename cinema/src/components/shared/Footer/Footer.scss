@@ -1,0 +1,26 @@
+@import '../../../styles/config/adaptive.scss';
+@import '../../../styles/config/fonts.scss';
+@import '../../../styles/config/vars.scss';
+
+
+footer {
+    margin-top: 30px;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .details {
+        @include montserrat(regular);
+        font-size: 12px;
+        max-width: 250px;
+        margin: 0;
+    }
+    .social {
+        img {
+            margin-left: 10px;
+        }
+    }
+}

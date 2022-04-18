@@ -4,38 +4,37 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Footer from './components/Footer';
-import Header from './components/Header/Header';
-import Films from './pages/Films';
-import Schedule from './pages/Schedule';
-import Film from './pages/Film';
-import Hall from './pages/Hall';
-import Comments from './pages/Comments';
-import About from './pages/About';
+
+import Header from './components/shared/Header/Header';
+import Schedule from './components/pages/Schedule/Schedule';
+import Films from './components/pages/Films';
+import Hall from './components/pages/Hall';
+import About from './components/pages/About/About';
+import Comments from './components/pages/Comments';
+import Film from './components/pages/Film';
+import Footer from './components/shared/Footer/Footer';
+import GoTopArrow from './components/shared/GoTopArrow';
 
 function App() {
-  useEffect(() => {
-    window.onscroll = () => {
-      const header = document.querySelector('header');
-      header.classList.toggle('sticky', window.scrollY > 0);
-    }
-  }, []);
+
 
   return (
     <BrowserRouter>
       <Header />
       <main>
         <Routes>
-          <Route index path="" element={<Schedule />} />
+          <Route path="/" element={<Schedule />} />
           <Route index path="/films" element={<Films />} />
           <Route index path="/films/:filmId" element={<Film />} />
-          <Route index path="/hall/:filmId" element={<Hall />} />
+          <Route index path="/hall/:filmId" element={<Hall />} />{/*+search params*/}
           <Route index path="/about" element={<About />} />
           <Route index path="/comments" element={<Comments />} />
           <Route path="*" element={<div>Not Found</div>} />
         </Routes>
       </main>
+      <GoTopArrow />
       <Footer />
+
     </BrowserRouter>
   );
 }

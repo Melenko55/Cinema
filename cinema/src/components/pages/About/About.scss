@@ -1,0 +1,35 @@
+@import '../../../styles/config/adaptive.scss';
+@import '../../../styles/config/fonts.scss';
+@import '../../../styles/config/vars.scss';
+
+
+.about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+        font-size: 32px;
+        @include poppins(medium);
+        
+    }
+    img {
+        width: 90%;
+        height: auto;
+        border-radius: 50px;
+    }
+    p {
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .btn-thanks {
+        margin-top: 15px;
+        background-color:  #BB8383;
+        border-radius: 0px 40px;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        max-width: 250px;
+    }
+}

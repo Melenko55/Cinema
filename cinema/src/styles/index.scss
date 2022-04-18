@@ -1,4 +1,6 @@
-@import './config/config.scss';
+@import './config/vars.scss';
+@import './config/adaptive.scss';
+
 
 body {
   background: $pink;
@@ -26,9 +28,15 @@ main {
 }
 
 body {
-  min-height: 1000px;
+  position: relative;
   scroll-behavior: smooth;
- 
+}
+
+button {
+  cursor: pointer;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
 }
 
 @include respond-to(xsmallDevices) {

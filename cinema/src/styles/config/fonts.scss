@@ -1,34 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Poppins:wght@100;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&family=Poppins:wght@200;400;500;600&display=swap');
 
-@mixin montserrat {
+@mixin montserrat($weight) {
     font-family: 'Montserrat', sans-serif;
+    @include weight($weight);
 }
     
-@mixin poppins {
+@mixin poppins($weight) {
     font-family: 'Poppins', sans-serif;
+     @include weight($weight);
 }
 
-@mixin extrLight_font {
-    font-weight: 200;
+
+@mixin weight($weight) {
+     @if $weight == thin {
+        font-weight: 200;
+    } @else if $weight == regular {
+        font-weight: 400;
+    } @else if $weight == medium {
+        font-weight: 500;
+    } @else if $weight == bold {
+        font-weight: 600;
+    }
 }
 
-@mixin light_font {
-    font-weight: 300;
-}
 
-@mixin regular_font {
-    font-weight: 400;
+@mixin  font-size($size) {
+    font-size: $size;
 }
-
-@mixin medium_font {
-    font-weight: 500;
-}
-
-@mixin semiBold_font {
-    font-weight: 600;
-}
-
-@mixin bold_font {
-    font-weight: 700;
-}
-    

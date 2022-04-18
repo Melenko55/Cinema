@@ -1,0 +1,6 @@
+export const SCHEDULE_PATH = '/'
+export const FILMS_PATH = '/films'
+export const FILM_PATH = '/films/:filmId'
+export const HALL_PATH = '/hall/:filmId'
+export const ABOUT_PATH = '/about'
+export const COMMENTS_PATH = '/comments'
